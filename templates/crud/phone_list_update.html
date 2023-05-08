@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone Lst update</title>
+</head>
+<body>
+<h1>Выберите телефон для обновления</h1>
+<h2><a href="/phone_list/" class="btn btn-primary">На главную</a></h2>
+<ul>
+    {% for i in object_list %}
+    <li>
+        <a href="/phone_update/{{i.id}}/update/">{{i.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
+
+<style>
+    /*Уникальный селектор*/
+    body {
+        background-color: ivory;
+        color: brown;
+        text-align: center;
+    }
+
+    /*Селектор тэга*/
+    h1 {
+        color: darkred;
+        font-family: "Arial";
+    }
+</style>
